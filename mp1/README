@@ -1,0 +1,25 @@
+# MP1
+
+## Problems Encountered
+
+### To create a large file for test
+```bash
+dd if=/dev/zero of=largefile bs=1G count=1
+```
+this creates a file named largefile with size 1G filled with zeros.
+
+### Dealing with Header and Remaining information
+It is possible that you only receive a header with one `recv()`. Need to check for the return value of `recv()` to extract header.
+
+### Parse header/input arguments
+`strstr(*ptr, *delim)` return a pointer to the location of `*delim`.
+
+`strtok(*ptr, *delim)` replace the location of the first `*delim` encountered with NULL. 
+Use `*ptr=NULL` to deal with the part of string after the first `*delim`.
+
+### Read continuously from file
+`fgets()` returns a pointer to a new-line terminated string. Not compatible with `strlen()`.
+
+`fread()` return number of bytes read. Can be used in `send()` to specify the part of data in buffer that is useful.
+
+`strlen()` is problematic. Would bring incorrect count.

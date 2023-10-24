@@ -1,0 +1,15 @@
+{
+    "files.associations": {
+        "stdio.h": "c",
+        "stdlib.h": "c",
+        "unistd.h": "c",
+        "errno.h": "c",
+        "string.h": "c",
+        "netdb.h": "c",
+        "types.h": "c",
+        "in.h": "c",
+        "socket.h": "c",
+        "assert.h": "c",
+        "inet.h": "c"
+    }
+}
