@@ -188,7 +188,7 @@ int main(int argc, char *argv[])
 				// close file descriptor
 				fclose(fd);
 			}
-
+			shutdown(new_fd, SHUT_RDWR);
 			close(new_fd);
 			exit(0);
 		}
